@@ -7,11 +7,25 @@ $roboto: 'Roboto',
 sans-serif;
 
 
+
 //właściwości wejśćiowe
 * {
  margin: 0;
  padding: 0;
  box-sizing: border-box;
  font-size: 10px;
+
+}
+
+.grid {
+ display: grid;
+ grid-template-columns: minmax(120px, 1fr);
+ grid-template-rows: auto 1fr auto;
+ grid-template-areas:
+  "header"
+  "center"
+  "footer";
+ max-width: 1600px;
  font-family: $roboto;
+
 }

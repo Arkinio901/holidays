@@ -1,0 +1,133 @@
+.header {
+ width: 100%;
+
+ &__h1 {
+  width: 100%;
+  grid-area: header;
+  font-family: $playfair;
+  font-size: 4rem;
+  // text-transform: uppercase;
+  text-decoration: underline;
+  padding: 20px;
+  text-align: center;
+
+ }
+
+ .logo {
+  width: 60%;
+  max-width: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 50%;
+
+
+  &__img {
+   display: block;
+   width: 100%;
+  }
+ }
+
+ &__description {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 15px 0;
+
+
+
+ }
+
+ &__h3 {
+  font-size: 2.5rem;
+  margin-left: 20px;
+  width: 100%;
+
+  @media(min-width:640px) {
+   font-size: 3.5rem;
+  }
+
+  @media(min-width:800px) {
+   margin-left: 40px;
+  }
+ }
+
+ &__p {
+  display: block;
+  text-indent: 20px;
+  width: 80%;
+  font-size: 1.8rem;
+  margin: 5px 20px 5px auto;
+  font-family: $roboto;
+
+  @media(min-width:640px) {
+   font-size: 2rem;
+   line-height: 2.5rem;
+  }
+
+  @media(min-width:800px) {
+   margin-right: 60px;
+   margin-top: 20px;
+  }
+
+  & strong {
+   font-size: 1.8rem;
+
+   @media(min-width:640px) {
+    font-size: 2rem;
+
+   }
+  }
+ }
+
+ @media(min-width: 1024px) {
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) minmax(400px, 90%) auto;
+  grid-template-rows: 2;
+  grid-template-areas:
+   "logo name ."
+   "description description description";
+
+  .logo {
+   grid-area: logo;
+   margin: 20px 10px;
+   max-width: 600px;
+
+  }
+
+  &__h1 {
+
+   grid-area: name;
+   // text-align: center;
+   margin-left: 0;
+   align-content: center;
+   align-self: center;
+   font-size: 5rem;
+  }
+
+  &__description {
+   grid-area: description;
+  }
+ }
+
+ @media(min-width:1200px) {
+  grid-template-columns: minmax(200px, 400px) minmax(400px, 90%) auto;
+
+
+  &__h1 {
+   font-size: 6rem;
+  }
+
+  &__h3 {
+   margin-left: 80px;
+  }
+
+  &__p {
+   font-size: 2.5rem;
+   line-height: 2.7rem;
+
+   & strong {
+    font-size: 2.5rem;
+   }
+  }
+ }
+}
