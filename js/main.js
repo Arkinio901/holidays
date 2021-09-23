@@ -26,4 +26,23 @@ const changeSlide = () => {
 
 
 }
-setInterval(changeSlide, time)
+setInterval(changeSlide, time);
+
+const title = document.querySelector('.article__h2').textContent;
+const description = document.querySelector(".description__p--opis").textContent;
+document.querySelector('.article button').addEventListener("click", function () {
+ document.querySelector('.modal-wrap').classList.add('active');
+ const top = document.querySelector('.top');
+ const middle=document.querySelector('.middle');
+ top.classList.add('activeTitle');
+ top.textContent=title;
+ middle.textContent= description;
+ 
+ 
+})
+
+
+document.querySelector('span.hide').addEventListener("click", function () {
+ document.querySelector('.modal-wrap').classList.remove('active');
+
+})
