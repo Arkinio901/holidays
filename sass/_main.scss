@@ -19,6 +19,9 @@
 
   // font-size: 3rem;
   // flex-basis: 100%;
+  @media(min-width:800px) {
+   font-size: 4rem;
+  }
  }
 }
 
@@ -27,25 +30,95 @@
  flex-wrap: wrap;
  margin: 20px auto;
  flex-basis: 90%;
+
  // justify-content: center;
  // align-self: center;
-
+ @media(min-width:1024px) {
+  flex-basis: 30%;
+ }
 
  &__h2 {
   width: 100%;
   text-align: center;
   font-size: 2.5rem;
   margin: 0 auto;
+
+
+  @media(min-width:800px) {
+   font-size: 3rem;
+  }
+
+  @media(min-width:1024px) {
+   display: none;
+  }
+
  }
 
  &__photo {
   flex-basis: min(150px);
-  flex-basis: max(400px);
+  flex-basis: max(420px);
   margin: 10px auto 0 auto;
+  overflow: hidden;
+
+
+
+  @media(min-width:1024px) {
+   position: relative;
+
+   &:hover {
+    .article__h2--hover {
+     display: block;
+     position: absolute;
+     z-index: 999;
+     font-size: 3rem;
+     top: 5px;
+     left: 50%;
+     transform: translate(-50%, 0);
+     background-color: rgba(0, 0, 0, 0.8);
+     color: white;
+     padding: 5px;
+
+    }
+   }
+
+  }
+
+  // &:hover {
+  //  @media(min-width:1024px) {
+  //   .photo__h2 {
+  //    display: block;
+  //    position: absolute;
+  //    top: 50%;
+  //    left: 50%;
+  //    transform: translate(-50%, -50%);
+  //    z-index: 999;
+  //    font-size: 5rem;
+  //    background-color: rgba(0, 0, 0, 0.2);
+  //    padding: 5px 20px;
+  //   }
+  //  }
+  // }
  }
+
+ .article__h2--hover {
+  display: none;
+ }
+
 
  &__img {
   width: 100%;
+  transition: 2s linear;
+
+  @media(min-width:1024px) {
+   &:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+
+
+
+   }
+  }
+
  }
 
  // @media(min-width:1024px) {
@@ -54,11 +127,15 @@
 
  &__description {
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
   // max-width: 100px;
   margin: 0 auto;
   background-color: #aaa;
   padding: 10px 0;
+
+  @media(min-width:1024px) {
+   display: none;
+  }
  }
 
  .description__p {
@@ -67,6 +144,10 @@
    font-size: 1.7rem;
    display: block;
    padding: 10px;
+
+   @media(min-width:800px) {
+    font-size: 2rem;
+   }
   }
 
   &--opis {
