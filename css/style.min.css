@@ -226,6 +226,18 @@
 .article .article__h2--hover {
   display: none;
 }
+@media (min-width: 1024px) {
+  .article .article__h2--hover {
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    font-size: 3rem;
+    z-index: 999;
+  }
+}
 .article__img {
   width: 100%;
   -webkit-transition: 2s linear;
