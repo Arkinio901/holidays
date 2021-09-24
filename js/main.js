@@ -39,6 +39,67 @@ setInterval(changeSlide, time);
 //  console.log('dziala');
 // }))
 
+// const titleOne = document.querySelector('.article__h2--one').textContent;
+// const titleTwo = document.querySelector('.article__h2--two').textContent;
+// const titleThree = document.querySelector('.article__h2--three').textContent;
+// const titleFour = document.querySelector('.article__h2--four').textContent;
+// const descriptionOne = document.querySelector(".description__p--one").textContent;
+// const descriptionTwo = document.querySelector(".description__p--two").textContent;
+// const descriptionThree = document.querySelector(".description__p--three").textContent;
+// const descriptionFour = document.querySelector(".description__p--four").textContent;
+// document.querySelector('.btn__one').addEventListener("click", function () {
+//  document.querySelector('.modal-wrap').classList.add('active');
+//  const top = document.querySelector('.top');
+//  const middle=document.querySelector('.middle');
+//  top.classList.add('activeTitle');
+//  top.textContent=titleOne;
+//  middle.textContent= descriptionOne;
+// })
+
+
+// document.querySelector('.btn__two').addEventListener("click", function () {
+//  document.querySelector('.modal-wrap').classList.add('active');
+//  const top = document.querySelector('.top');
+//  const middle=document.querySelector('.middle');
+//  top.classList.add('activeTitle');
+//  top.textContent=titleTwo;
+//  middle.textContent= descriptionTwo;
+// })
+
+
+
+// document.querySelector('.btn__three').addEventListener("click", function () {
+//  document.querySelector('.modal-wrap').classList.add('active');
+//  const top = document.querySelector('.top');
+//  const middle=document.querySelector('.middle');
+//  top.classList.add('activeTitle');
+//  top.textContent=titleThree;
+//  middle.textContent= descriptionThree;
+// })
+
+
+// document.querySelector('.btn__four').addEventListener("click", function () {
+//  document.querySelector('.modal-wrap').classList.add('active');
+//  const top = document.querySelector('.top');
+//  const middle=document.querySelector('.middle');
+//  top.classList.add('activeTitle');
+//  top.textContent=titleFour;
+//  middle.textContent= descriptionFour;
+// })
+// document.querySelector('span.hide').addEventListener("click", function () {
+//  document.querySelector('.modal-wrap').classList.remove('active');
+
+// })
+
+//pobieram wszystkie przyciski
+const btn = document.querySelectorAll(...['.btn']);
+
+
+
+//ustawiam nasłuchiwanie na pojedyńczy przycisk
+btn.forEach(elements=>elements.addEventListener('click', function(e){
+e.preventDefault();
+//pobranie wszystkich textContent
 const titleOne = document.querySelector('.article__h2--one').textContent;
 const titleTwo = document.querySelector('.article__h2--two').textContent;
 const titleThree = document.querySelector('.article__h2--three').textContent;
@@ -47,46 +108,39 @@ const descriptionOne = document.querySelector(".description__p--one").textConten
 const descriptionTwo = document.querySelector(".description__p--two").textContent;
 const descriptionThree = document.querySelector(".description__p--three").textContent;
 const descriptionFour = document.querySelector(".description__p--four").textContent;
-document.querySelector('.btn__one').addEventListener("click", function () {
- document.querySelector('.modal-wrap').classList.add('active');
+document.querySelector('.modal-wrap').classList.add('active');
  const top = document.querySelector('.top');
  const middle=document.querySelector('.middle');
- top.classList.add('activeTitle');
+//pobieram aktualnie kliknięty przycisk
+const show =e.target.name;
+
+if(e.target.name==="one"){
+    
+    top.classList.add('activeTitle');
+
  top.textContent=titleOne;
  middle.textContent= descriptionOne;
-})
-
-
-document.querySelector('.btn__two').addEventListener("click", function () {
- document.querySelector('.modal-wrap').classList.add('active');
- const top = document.querySelector('.top');
- const middle=document.querySelector('.middle');
- top.classList.add('activeTitle');
- top.textContent=titleTwo;
+}
+    else if (e.target.name==="two"){
+        top.textContent=titleTwo;
  middle.textContent= descriptionTwo;
-})
-
-
-
-document.querySelector('.btn__three').addEventListener("click", function () {
- document.querySelector('.modal-wrap').classList.add('active');
- const top = document.querySelector('.top');
- const middle=document.querySelector('.middle');
- top.classList.add('activeTitle');
- top.textContent=titleThree;
+        
+    }
+    else if (e.target.name==="three"){
+        
+        top.textContent=titleThree;
  middle.textContent= descriptionThree;
-})
-
-
-document.querySelector('.btn__four').addEventListener("click", function () {
- document.querySelector('.modal-wrap').classList.add('active');
- const top = document.querySelector('.top');
- const middle=document.querySelector('.middle');
- top.classList.add('activeTitle');
- top.textContent=titleFour;
+    }
+    else if (e.target.name==="four"){
+        top.textContent=titleFour;
  middle.textContent= descriptionFour;
-})
-document.querySelector('span.hide').addEventListener("click", function () {
- document.querySelector('.modal-wrap').classList.remove('active');
+    }else{
+        return 0;
+    }
 
-})
+
+}))
+document.querySelector('span.hide').addEventListener("click", function () {
+     document.querySelector('.modal-wrap').classList.remove('active');
+    
+    });
