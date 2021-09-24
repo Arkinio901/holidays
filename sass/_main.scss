@@ -64,6 +64,7 @@
   margin: 0 auto;
 
 
+
   @media(min-width:800px) {
    font-size: 3rem;
   }
@@ -89,7 +90,7 @@
     .article__h2--hover {
      display: block;
      position: absolute;
-     z-index: 999;
+     z-index: 995;
      font-size: 3rem;
      top: 5px;
      left: 50%;
@@ -197,5 +198,6 @@
   text-transform: uppercase;
   letter-spacing: 1px;
  }
+
 
 }
