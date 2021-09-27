@@ -101,6 +101,7 @@ const descriptionOne = document.querySelector(".description__p--one").textConten
 const descriptionTwo = document.querySelector(".description__p--two").textContent;
 const descriptionThree = document.querySelector(".description__p--three").textContent;
 const descriptionFour = document.querySelector(".description__p--four").textContent;
+const descriptionOneCours = document.querySelector(".description__p--coursOne").textContent;
 
 
 //ustawiam nasłuchiwanie na pojedyńczy przycisk
@@ -113,13 +114,11 @@ document.querySelector('.modal-wrap').classList.add('active');
 //pobieram aktualnie kliknięty przycisk
 const show =e.target.name;
 console.log(show);
-
+top.classList.add('activeTitle');
 if(e.target.name==="one"){
-    
-    top.classList.add('activeTitle');
-
  top.textContent=titleOne;
- middle.textContent= descriptionOne;
+ middle.textContent=descriptionOne;
+ 
 }
     else if (e.target.name==="two"){
         top.textContent=titleTwo;
@@ -149,9 +148,10 @@ document.querySelector('span.hide').addEventListener("click", function () {
     //funkcja na article__photo
 
     const article = document.querySelectorAll(...['.article__photo']);
+    let view = screen.width;
+    console.log(view);
     
-    
-
+    if(screen.width>1024){
     article.forEach(elements=>elements.addEventListener('click', function(e){
         e.preventDefault();
         //pobranie wszystkich textContent
@@ -170,7 +170,7 @@ document.querySelector('span.hide').addEventListener("click", function () {
         // h2.style.display="none";
         // console.log(show);
         top.classList.add('activeTitle');
-        
+    
         if(e.target.name==="one"){
             
             
@@ -201,4 +201,4 @@ document.querySelector('span.hide').addEventListener("click", function () {
              document.querySelector('.modal-wrap').classList.remove('active');
              document.querySelectorAll(...['.article__h2--hover']).forEach(element=>element.style.display="block"); 
             
-            });
+            });}

@@ -148,6 +148,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: scroll;
+  z-index: 999;
 }
 
 .modal-wrap.active .modal {
@@ -166,6 +167,7 @@
   width: 80%;
   height: 70%;
   border: 2px solid black;
+  z-index: 999;
   /* background-color: black; */
 }
 
@@ -280,6 +282,9 @@ span {
   -ms-flex-preferred-size: 90%;
       flex-basis: 90%;
 }
+.article__h2:hover {
+  display: none;
+}
 @media (min-width: 1024px) {
   .article {
     -ms-flex-preferred-size: 30%;
@@ -317,7 +322,7 @@ span {
   .article__photo:hover .article__h2--hover {
     display: block;
     position: absolute;
-    z-index: 999;
+    z-index: 995;
     font-size: 3rem;
     top: 5px;
     left: 50%;
