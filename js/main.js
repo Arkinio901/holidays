@@ -207,10 +207,12 @@ if (screen.width > 1024){
     });}
 
     const arrow = document.querySelector('.arrow');
+    // const arrowText = document.querySelector('.fa');
     window.addEventListener('scroll', ()=>{
         console.log(window.scrollY)
         if(window.scrollY>400){
         arrow.classList.add('active');
+        // false.classList.add('fa__txt')
         } else if(window.scrollY<50){
             arrow.classList.remove('active');
         }
