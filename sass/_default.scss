@@ -44,12 +44,27 @@ html {
  background-color: #1450F5;
  color: white;
  text-align: center;
- border-radius: 50%;
- line-height: 50px;
+ border-radius: 20%;
  display: none;
+
 
 }
 
 .active {
+ display: flex;
+ justify-content: center;
+}
+
+.active:hover {
+ color: #aaa;
+ background-color: #4986FA;
+
+}
+
+.fa {
  display: block;
+ // align-content: center;
+ // align-self: center;
+ align-self: center;
+ justify-self: center;
 }

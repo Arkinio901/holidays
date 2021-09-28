@@ -33,13 +33,29 @@ html {
   background-color: #1450F5;
   color: white;
   text-align: center;
-  border-radius: 50%;
-  line-height: 50px;
+  border-radius: 20%;
   display: none;
 }
 
 .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.active:hover {
+  color: #aaa;
+  background-color: #4986FA;
+}
+
+.fa {
   display: block;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
 }
 
 .header {
