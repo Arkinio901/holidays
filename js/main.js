@@ -200,8 +200,8 @@ if (screen.width > 1024){
         }))
         document.querySelector('span.hide').addEventListener("click", function () {
              document.querySelector('.modal-wrap').classList.remove('active');
-             
-             document.querySelectorAll(...['.article__h2--hover']).forEach(element=>element.style.display="block"); 
+             if(window.innerWidth >1024){
+             document.querySelectorAll(...['.article__h2--hover']).forEach(element=>element.style.display="block");} 
              
         
     });}
